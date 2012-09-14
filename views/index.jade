@@ -16,28 +16,32 @@ html(lang='en')
       div(data-role='header')
         h1 Steria Quiz
       div(data-role='content')
-        div(data-role='fieldcontain')
-          fieldset(data-role='controlgroup')
-            legend Hva er 2+2?
-            input(type='radio', name='toplussto', id='toplussto-1', value='1a')
-            label(for='toplussto-1') 4
-            input(type='radio', name='toplussto', id='toplussto-2', value='1b')
-            label(for='toplussto-2') 42
-            input(type='radio', name='toplussto', id='toplussto-3', value='1c')
-            label(for='toplussto-3') Vet ikke
-        div(data-role='fieldcontain')
-          fieldset(data-role='controlgroup')
-            legend Hvem er bestest?
-            input(type='radio', name='hvemerbest', id='hvemerbest-1', value='2a')
-            label(for='hvemerbest-1') Apple
-            input(type='radio', name='hvemerbest', id='hvemerbest-2', value='2b')
-            label(for='hvemerbest-2') Samsung
-            input(type='radio', name='hvemerbest', id='hvemerbest-3', value='2c')
-            label(for='hvemerbest-3') Chuck
-        div(data-role='fieldcontain')
-          label(for='name') Navn
-          input(type='text', name='name', id='name', value='')
-          label(for='phone') Telefon
-          input(type='tel', name='phone', id='phone', value='')
-          label(for='email') Elektrisk post
-          input(type='email', name='email', id='email', value='')
+        form(action='post', method='post', data-ajax='false')
+          div(data-role='fieldcontain')
+            fieldset(data-role='controlgroup')
+              legend Hva er 2+2?
+              input(type='radio', name='toplussto', id='toplussto-1', value='1a')
+              label(for='toplussto-1') 4
+              input(type='radio', name='toplussto', id='toplussto-2', value='1b')
+              label(for='toplussto-2') 42
+              input(type='radio', name='toplussto', id='toplussto-3', value='1c')
+              label(for='toplussto-3') Vet ikke
+          div(data-role='fieldcontain')
+            fieldset(data-role='controlgroup')
+              legend Hvem er bestest?
+              input(type='radio', name='hvemerbest', id='hvemerbest-1', value='2a')
+              label(for='hvemerbest-1') Apple
+              input(type='radio', name='hvemerbest', id='hvemerbest-2', value='2b')
+              label(for='hvemerbest-2') Samsung
+              input(type='radio', name='hvemerbest', id='hvemerbest-3', value='2c')
+              label(for='hvemerbest-3') Chuck
+          div(data-role='fieldcontain')
+            label(for='name') Navn
+            input(type='text', name='name', id='name', value='')
+            label(for='phone') Telefon
+            input(type='tel', name='phone', id='phone', value='')
+            label(for='email') Elektrisk post
+            input(type='email', name='email', id='email', value='')
+          div(data-role='fieldcontain')
+            label(for='submit') Ferdig?
+            input(type='submit', name='submit', id='submit', value='Jeg vil vinne!')
